@@ -1,17 +1,34 @@
 {
-  "name": "client",
+  "name": "app-bridgeclient-react",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://10.30.10.254:13000",
   "dependencies": {
+    "@xyo-network/tool-storybook-react": "0.0.0-alpha.9",
+    "apollo-cache-inmemory": "^1.5.1",
+    "apollo-client": "^2.5.1",
+    "apollo-link-context": "^1.0.17",
+    "apollo-link-http": "^1.5.12",
+    "bootstrap": "^4.3.1",
+    "bootstrap-sass": "^3.4.1",
+    "classnames": "^2.2.6",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "lodash": "^4.17.11",
     "react": "^16.8.4",
+    "react-apollo": "^2.5.2",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "web3": "^1.0.0-beta.50"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "package": "rm -f ./bridge-client.zip && build && zip -r -X bridge-client.zip build",
+    "deploy": "scp ./bridge-client.zip pi@$IP:~/Documents && ssh pi@$IP \"rm -rf ~/Documents/bridge-client && unzip ~/Documents/bridge-client.zip -d ~/Documents/bridge-client\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +38,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
 }

@@ -1,0 +1,17 @@
+@import "@xyo-network/tool-storybook-react/dist/styles/index.scss";
+
+.close {
+  color: currentColor;
+}
+.close:hover {
+  color: currentColor;
+}
+.medium-icon {
+  height: 32px;
+}
+.large-icon {
+  height: 48px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}

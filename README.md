@@ -1,68 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](logo.png)
 
-## Available Scripts
+# XYO Bridge Manager (app-bridgeclient-react)
 
-In the project directory, you can run:
+## Branches
 
-### `npm start`
+### Master
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![Build Status](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react.svg?branch=master)](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react)
+[![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=master&token=75e0ed2470ac349132bdaefb1fd64991cbd85d23)](https://bettercodehub.com/results/XYOracleNetwork/app-bridgeclient-react)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f84e767728bcb7b5f0e7/maintainability)](https://codeclimate.com/github/XYOracleNetwork/app-bridgeclient-react/maintainability)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Develop
 
-### `npm test`
+[![Build Status](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react.svg?branch=develop)](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react)
+[![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=develop&token=75e0ed2470ac349132bdaefb1fd64991cbd85d23)](https://bettercodehub.com/results/XYOracleNetwork/app-bridgeclient-react)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+The web application to manage and monitor XYO Bridges.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Developer Mode
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Requirements (Step 1)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install Node 10.x or later from: [NodeJs](https://nodejs.org/en/download/current/)
 
-### `npm run eject`
+### Install Dependencies (Step 2)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build Dependencies (Step 3)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+yarn build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Proxy Bridge Server
 
-## Learn More
+package.json
+```
+{
+  "homepage": "http://$YOUR_BRIDGE_IP",
+  ...
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Start App (Step 4)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn start
+```
 
-### Code Splitting
+## Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Build and Compress (step 1)
 
-### Analyzing the Bundle Size
+```bash
+yarn package
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Transfer to Bridge (step 2)
 
-### Making a Progressive Web App
+```bash
+$IP={YOUR_BRIDGE_IP} yarn deploy
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## License
 
-### Advanced Configuration
+Only for internal XY Company use at this time
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Credits
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Made with ❤️
+by [XYO](https://xyo.network)
