@@ -13,7 +13,7 @@
 ### Develop
 
 [![Build Status](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react.svg?branch=develop)](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react)
-[![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=develop&token=75e0ed2470ac349132bdaefb1fd64991cbd85d23)](https://bettercodehub.com/results/XYOracleNetwork/app-bridgeclient-react)
+[![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=develop&token=75e0ed2470ac349132bdaefb1fd64991cbd85d23)](https://bettercodehub.com/results/XYOracleNetwork/app-bridgeclient-react) [![Greenkeeper badge](https://badges.greenkeeper.io/XYOracleNetwork/app-bridgeclient-react.svg?token=a99e5c7a2b9db27b6e3034925dcbe979e8dca95cb491eec010fa337df422bfc6&ts=1553716476022)](https://greenkeeper.io/)
 
 ## Description
 
