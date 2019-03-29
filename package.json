@@ -2,7 +2,7 @@
   "name": "app-bridgeclient-react",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://10.30.10.254:13000",
+  "proxy": "http://localhost:13000",
   "dependencies": {
     "@xyo-network/tool-storybook-react": "0.0.0-alpha.9",
     "apollo-cache-inmemory": "^1.5.1",
@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "package": "rm -f ./bridge-client.zip && build && zip -r -X bridge-client.zip build",
+    "package": "rm -f ./bridge-client.zip && yarn build && zip -r -X bridge-client.zip build",
     "deploy": "scp ./bridge-client.zip pi@$IP:~/Documents && ssh pi@$IP \"rm -rf ~/Documents/bridge-client && unzip ~/Documents/bridge-client.zip -d ~/Documents/bridge-client\""
   },
   "eslintConfig": {

@@ -1,12 +1,19 @@
 import React, { Fragment, useState } from 'react'
 import { parseError } from '../../gql/error'
 import BridgeNetworkStatus from '../../gql/queries/networkStatus'
-import Loader from '@xyo-network/tool-storybook-react/dist/lib/Loader'
 import WifiStatus from '../WifiStatus'
 import Logo from '../Logo'
 import cx from 'classnames'
+import identity from 'lodash/identity'
 import get from 'lodash/get'
 import './index.css'
+
+const networkStatusText = (data) => {
+  if (!data) return data
+  const ssid = get(data, 'network.ssid')
+  const ip = get(data, 'network.ip')
+  return [ssid, ip].filter(identity).join(' ')
+}
 
 const Navbar = ({
   goBack,
@@ -32,22 +39,20 @@ const Navbar = ({
       >
         <div className='d-flex navbar-brand align-items-center px-2'>
           <Logo className='pr-1' style={{ height: 32 }} /> XYO Bridge{' '}
-          <BridgeNetworkStatus>
-            {({ data, loading, error }) => 
-              loading
-              ? <Loader />
-              : error
-              ? <p className='text-danger mb-0 pl-2'>{parseError(error)}</p>
-              : get(data, 'network.ip')
-              ? `- ${get(data, 'network.ip')}`
-              : ''
-            }
-          </BridgeNetworkStatus>
         </div>
         <div className='collapse navbar-collapse align-self-stretch align-items-stretch'>
           <div className='navbar-nav'>
           </div>
-          <div className='navbar-nav ml-auto'>
+          <div className='d-flex navbar-nav ml-auto align-items-center'>
+            <BridgeNetworkStatus>
+              {({ data, loading, error }) => 
+                loading
+                ? ''
+                : error
+                ? <p className='text-danger mb-0 pr-2'>{parseError(error)}</p>
+                : <p className='text-white mb-0 pr-2'>{networkStatusText(data)}</p>
+              }
+            </BridgeNetworkStatus>
             <WifiStatus />
           </div>
         </div>
