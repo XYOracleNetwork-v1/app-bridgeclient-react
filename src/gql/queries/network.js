@@ -16,5 +16,5 @@ export const BRIDGE_NETWORK = gql`
 `
 
 export default ({ children }) => (
-  <Query query={BRIDGE_NETWORK} errorPolicy='none'>{ children }</Query>
+  <Query query={BRIDGE_NETWORK} notifyOnNetworkStatusChange={true} errorPolicy='none'>{ children }</Query>
 )

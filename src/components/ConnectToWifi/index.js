@@ -26,8 +26,9 @@ export default ({ open, closeModal }) => {
   return (
     <Modal open={open} onClose={closeModal}>
       <BridgeNetwork>
-        {({ data, loading: aboutLoading, error: aboutError }) => 
+        {({ data, loading: aboutLoading, error: aboutError, refetch, networkStatus }) => 
           <ModalContent
+            onClose={closeModal}
             className='overflow-hidden'
             headerClassName='bg-info text-white'
             title={
@@ -45,13 +46,21 @@ export default ({ open, closeModal }) => {
                       <Alert type={'danger'}>{parseError(error)}</Alert>
                       {
                         aboutLoading
-                        ? <Loader />
-                        : <Select
-                            label='Wifi Name'
-                            options={uniq(['Choose a network'].concat((get(data, 'scan') || []).map(({ ssid }) => ssid).filter(identity)))}
-                            value={selected}
-                            onChange={selectNetwork}
-                          />
+                        ? <div className='text-center'><Loader /></div>
+                        : <div className='d-flex'>
+                            <Select
+                              className='flex-grow-1'
+                              label='Wifi Name'
+                              options={uniq(['Choose a network'].concat((get(data, 'scan') || []).map(({ ssid }) => ssid).filter(identity)))}
+                              value={selected}
+                              onChange={selectNetwork}
+                            />
+                            <button 
+                              type='button'
+                              className='btn' 
+                              onClick={() => refetch()}
+                            >Refresh</button>
+                          </div>
                       }
                       {
                         selected 

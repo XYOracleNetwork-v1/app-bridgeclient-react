@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { parseError } from '../../gql/error'
+import { usePinProvider } from '../../pin'
 import BridgeNetworkStatus from '../../gql/queries/networkStatus'
 import WifiStatus from '../WifiStatus'
 import Logo from '../Logo'

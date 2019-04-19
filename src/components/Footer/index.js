@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Logo from '../Logo'
 import cx from 'classnames'
 import UpdatePin from '../UpdatePin'
+import ForceUpdate from '../ForceUpdate';
 
 export const Footer = ({ className }) => {
   return (
@@ -28,6 +29,7 @@ export const Footer = ({ className }) => {
               get help
             </a>
             <UpdatePin className='p-2 border-bottom d-block text-capitalize cursor-pointer' />
+            <ForceUpdate className='p-2 border-bottom d-block text-capitalize cursor-pointer' />
           </div>
           <div className='col-md-4 d-flex flex-column justify-content-center py-4'>
             <div className='p-2 text-uppercase'>
