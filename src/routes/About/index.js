@@ -8,6 +8,7 @@ import { Footer } from '../../components/Footer'
 import { usePinProvider } from '../../pin'
 import get from 'lodash/get'
 import cx from 'classnames'
+import CheckForUpdates from '../../components/CheckForUpdates';
 
 const BridgeVersionMessage = ({ data, loading }) => {
   if (loading) return (
@@ -15,24 +16,23 @@ const BridgeVersionMessage = ({ data, loading }) => {
       <Loader /> 
     </h4>  
   )
-  const npmCurrent = get(data, 'getNpmPackageVersion.current')
-  const npmLatest = get(data, 'getNpmPackageVersion.latest')
+
   const aptCurrent = get(data, 'getAptPackageVersion.current')
   const aptLatest = get(data, 'getAptPackageVersion.latest')
-  if (npmCurrent === npmLatest && aptCurrent === aptLatest) {
+  if (aptCurrent === aptLatest) {
     return <h4>Your bridge is up to date</h4>
   }
   return <h4>Your bridge is out of date</h4>
 }
 
 const BridgeVersions = ({ data }) => {
-  const npmCurrent = get(data, 'getNpmPackageVersion.current')
   const npmLatest = get(data, 'getNpmPackageVersion.latest')
   const aptCurrent = get(data, 'getAptPackageVersion.current')
   const aptLatest = get(data, 'getAptPackageVersion.latest')
   return (
     <>
-      <div>
+      {/* <div>
+        **there is no reason to have npm version because that is contained in the apt**
         <b className='pr-2'>Current NPM Version: </b>
         <span className={cx({ 
           'text-danger': npmCurrent !== npmLatest
@@ -44,7 +44,7 @@ const BridgeVersions = ({ data }) => {
           'd-none': npmCurrent === npmLatest,
           'text-success': npmCurrent !== npmLatest
         })}>{npmLatest}</span>
-      </div>
+      </div> */}
       <div>
         <b className='pr-2'>Current APT Version: </b>
         <span className={cx({ 
@@ -79,16 +79,17 @@ export default ({}) => {
   return (
     <>
       <BridgeVersionsQuery>
-        {({ data, loading, error }) => (
+        {({ data, loading, error, refetching, refetch }) => (
           <div className='container mb-5 flex-grow-1'>
             <div className='row'>
               <div className='col-md-6 offset-md-3'>
                 <div className='card my-5'>
                   <div className='card-body'>
                     <Alert type='danger'>{get(error, 'message')}</Alert>
-                    <BridgeVersionMessage data={data} loading={loading} /> 
-                    <BridgeVersions data={data} loading={loading} /> 
+                    <BridgeVersionMessage data={data} loading={loading || refetching} /> 
+                    <BridgeVersions data={data} loading={loading || refetching} /> 
                     <ForceUpdate className='btn btn-danger text-white mt-2' />
+                    <CheckForUpdates className='btn btn-primary text-white ml-2 mt-2' onSuccess={refetch} />
                   </div>
                 </div>
                 <div className='card mb-5'>

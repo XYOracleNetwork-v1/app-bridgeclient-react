@@ -16,5 +16,5 @@ export const BRIDGE_VERSIONS = gql`
 `
 
 export default ({ children }) => (
-  <Query query={BRIDGE_VERSIONS}>{ children }</Query>
+  <Query query={BRIDGE_VERSIONS} notifyOnNetworkStatusChange={true}>{ children }</Query>
 )
