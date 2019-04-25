@@ -45,7 +45,7 @@ const BridgeVersions = ({ data }) => {
         })}>{npmLatest}</span>
       </div> */}
       <div>
-        <b className='pr-2'>Current APT Version: </b>
+        <b className='pr-2'>Current Version: </b>
         <span className={cx({ 
           'text-danger': aptCurrent !== aptLatest 
         })}>{aptCurrent}</span>
