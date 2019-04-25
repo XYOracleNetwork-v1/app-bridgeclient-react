@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import { Link, withRouter } from 'react-router-dom'
 import { parseError } from '../../gql/error'
 import { usePinProvider } from '../../pin'
 import BridgeNetworkStatus from '../../gql/queries/networkStatus'
@@ -22,7 +23,8 @@ const Navbar = ({
   hidden,
   transparent,
 }) => {
-  const onGoBack = () => history.goBack()
+  const onGoBack = () => history && history.goBack()
+  const goHome = () => history && history.push('/')
   const [menu, setMenu] = useState(false)
   const setMenuClosed = () => setMenu(false)
   const toggleMenu = () => setMenu(!menu)
@@ -39,7 +41,9 @@ const Navbar = ({
         )}
       >
         <div className='d-flex navbar-brand align-items-center px-2'>
-          <Logo className='pr-1' style={{ height: 32 }} /> XYO Bridge{' '}
+          <a onClick={goHome} className='text-white no-underline cursor-pointer'>
+            <Logo className='pr-1' style={{ height: 32 }} /> XYO Bridge{' '}
+          </a>
         </div>
         <div className='collapse navbar-collapse align-self-stretch align-items-stretch'>
           <div className='navbar-nav'>
@@ -64,4 +68,4 @@ const Navbar = ({
   )
 }
 
-export default Navbar
+export default withRouter(Navbar)

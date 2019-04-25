@@ -16,7 +16,6 @@ import Navbar from '../../components/Navbar'
 export default  () => {
   return (
     <Page>
-      <Navbar />
       <Main>
         <div className='col mb-5' />
         <SlideInDown timer={300}>

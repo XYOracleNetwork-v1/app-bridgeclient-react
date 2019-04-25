@@ -15,11 +15,10 @@ import get from 'lodash/get'
 export default () => {
   const [selected, selectNetwork] = useState(null)
   const closeModal = () => selectNetwork(null)
-  const pinProvider = usePinProvider()
+  usePinProvider()
   return (
-  <Fragment>
-    <Navbar />
-    <ConnectToWifi selected={selected} onClose={closeModal} />
+  <>
+    {/* <ConnectToWifi selected={selected} onClose={closeModal} /> */}
     <AboutBridge>
       {({ data, loading, error }) => (
         <>
@@ -58,6 +57,6 @@ export default () => {
       )}
     </AboutBridge>
     <Footer />
-  </Fragment>
+  </>
   );
 }
