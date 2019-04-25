@@ -26,7 +26,6 @@ const BridgeVersionMessage = ({ data, loading }) => {
 }
 
 const BridgeVersions = ({ data }) => {
-  const npmLatest = get(data, 'getNpmPackageVersion.latest')
   const aptCurrent = get(data, 'getAptPackageVersion.current')
   const aptLatest = get(data, 'getAptPackageVersion.latest')
   return (
@@ -56,7 +55,7 @@ const BridgeVersions = ({ data }) => {
         <span className={cx({
           'd-none': aptCurrent === aptLatest,
           'text-success': aptCurrent !== aptLatest 
-        })}>{npmLatest}</span>
+        })}>{aptLatest}</span>
       </div>
     </>
   )
