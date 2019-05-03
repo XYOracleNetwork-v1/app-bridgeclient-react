@@ -9,6 +9,7 @@ import { usePinProvider } from '../../pin'
 import get from 'lodash/get'
 import cx from 'classnames'
 import CheckForUpdates from '../../components/CheckForUpdates';
+import FactoryReset from '../../components/FactoryReset';
 
 const BridgeVersionMessage = ({ data, loading }) => {
   if (loading) return (
@@ -96,6 +97,13 @@ export default ({}) => {
                     <h4>Last Resort Update</h4>
                     <p>This cannot be undone and can have detrimental effects to your bridge.</p>
                     <LastResort className='btn btn-danger text-white' />
+                  </div>
+                </div>
+                <div className='card mb-5'>
+                  <div className='card-body'>
+                    <h4>Factory Reset</h4>
+                    <p>Will reset bridge to a factory state. This cannot be undone.</p>
+                    <FactoryReset className='btn btn-danger text-white' />
                   </div>
                 </div>
               </div>
