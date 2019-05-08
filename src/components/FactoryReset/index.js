@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Modal, { ModalContent } from '@xyo-network/tool-storybook-react/dist/lib/Modal'
 import Loader from '@xyo-network/tool-storybook-react/dist/lib/Loader'
 import Alert from '@xyo-network/tool-storybook-react/dist/lib/Alert'
+import { unclaimBridge } from '../../gql/mutations/unclaimBridge'
 import FactoryReset from '../../gql/mutations/factoryReset'
 import { parseError } from '../../gql/error'
 import over from 'lodash/over'
@@ -19,7 +20,7 @@ export default ({ className, onSuccess }) => {
           headerClassName='bg-info text-white' 
           title='Factory Reset'>
           <FactoryReset
-            update={over([onSuccess])}
+            update={over([onSuccess, unclaimBridge])}
           >
             {(factoryReset, { loading, error, data }) => (
               <div>
