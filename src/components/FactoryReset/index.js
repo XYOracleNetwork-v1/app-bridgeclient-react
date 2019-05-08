@@ -11,6 +11,10 @@ export default ({ className, onSuccess }) => {
   const [open, setOpen] = useState(false)
   const setModalOpen = () => setOpen(true)
   const setModalClosed = () => setOpen(false)
+  const unclaimThenReset = (reset) => async () => {
+    await unclaimBridge()
+    await reset()
+  }
   return (
     <>
       <a className={className} onClick={setModalOpen}>Factory Reset</a>
@@ -20,7 +24,7 @@ export default ({ className, onSuccess }) => {
           headerClassName='bg-info text-white' 
           title='Factory Reset'>
           <FactoryReset
-            update={over([onSuccess, unclaimBridge])}
+            update={onSuccess}
           >
             {(factoryReset, { loading, error, data }) => (
               <div>
@@ -41,7 +45,7 @@ export default ({ className, onSuccess }) => {
                     <button className='btn btn-danger mr-1' onClick={setModalClosed}>
                       Cancel
                     </button>
-                    <button className='btn btn-primary' onClick={factoryReset}>
+                    <button className='btn btn-primary' onClick={unclaimThenReset(factoryReset)}>
                       Confirm
                     </button>
                   </>
