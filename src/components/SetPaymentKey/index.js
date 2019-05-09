@@ -81,7 +81,8 @@ export default () => {
                   )
                 }
               </Alert>
-              <form onSubmit={onSubmit(updatePaymentKey)}>
+              <Alert type={'secondary'}>Coming Soon</Alert>
+              {/* <form onSubmit={onSubmit(updatePaymentKey)}>
                 <Text name='paymentKey' label='Payment Key' onChange={(v) => setPaymentKey(v)} value={paymentKey} />
                 {
                   loading
@@ -91,7 +92,7 @@ export default () => {
                       className='btn btn-primary' 
                     >Submit</button>
                 }
-              </form>
+              </form> */}
               </>
             )}
           </SetPaymentKey>

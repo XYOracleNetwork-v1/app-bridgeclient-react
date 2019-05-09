@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import {  Link } from 'react-router-dom'
 import Logo from '../Logo'
 import cx from 'classnames'
 import UpdatePin from '../UpdatePin'
@@ -13,6 +13,10 @@ export const Footer = ({ className }) => {
             <div className='p-2 text-uppercase '>
               <p className='mb-0'>account</p>
             </div>
+            <Link
+              className='p-2 border-bottom d-block text-capitalize'
+              to='/about'
+            >about</Link>
             <a
               className='p-2 border-bottom d-block text-capitalize'
               href={process.env.REACT_APP_TUTORIALS_URI || ''}
@@ -27,7 +31,6 @@ export const Footer = ({ className }) => {
             >
               get help
             </a>
-            <UpdatePin className='p-2 border-bottom d-block text-capitalize cursor-pointer' />
           </div>
           <div className='col-md-4 d-flex flex-column justify-content-center py-4'>
             <div className='p-2 text-uppercase'>
@@ -53,6 +56,7 @@ export const Footer = ({ className }) => {
             >
               terms of Service
             </a>
+            <UpdatePin className='p-2 border-bottom d-block text-capitalize cursor-pointer' />
           </div>
           <div className='col-md-4 d-flex flex-column justify-content-center text-center py-4'>
             <Logo />

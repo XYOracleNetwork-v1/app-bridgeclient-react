@@ -29,7 +29,7 @@ export default ({ publicKey }) => {
             const status = responseToStatus({ data, loading, error })
             const isOffline = status !== 'connected'
             const dns = get(data, 'network.ip')
-            const port = 13000
+            const port = 80
             if (isOffline) return (
               <SlideInLeft>
                 <div className='text-center py-3'>

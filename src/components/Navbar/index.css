@@ -45,3 +45,10 @@
 .nav-item:hover {
   text-decoration: none;
 }
+.no-underline {
+  text-decoration: none !important
+}
+.scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}

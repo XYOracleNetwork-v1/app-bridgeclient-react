@@ -25,51 +25,67 @@ export default ({ open, closeModal }) => {
   }
   return (
     <Modal open={open} onClose={closeModal}>
-      <ModalContent
-        className='overflow-hidden'
-        headerClassName='bg-info text-white'
-        title={selected ? `Connect to ${selected}` : 'Select a network'}>
-        <BridgeNetwork>
-          {({ data, loading: aboutLoading, error: aboutError }) => 
-          <Fragment>
-            <Alert type={'danger'}>{parseError(aboutError)}</Alert>
-            <ConnectBridgeWifi update={closeModal}>
-              {(connect, { loading, error }) => (
-                <form onSubmit={onSubmit(connect)}>
-                  <Alert type={'danger'}>{parseError(error)}</Alert>
-                  {
-                    aboutLoading
-                    ? <Loader />
-                    : <Select
-                        label='Wifi Name'
-                        options={uniq(['Choose a network'].concat((get(data, 'scan') || []).map(({ ssid }) => ssid).filter(identity)))}
-                        value={selected}
-                        onChange={selectNetwork}
-                      />
-                  }
-                  {
-                    selected 
-                    ? (
-                      <Text label='Wifi Password' name='password' type='password' />
-                    ) 
-                    : ''
-                  }
-                  {
-                    loading
-                    ? <Loader />
-                    : selected
-                    ? <button 
-                        type='submit'
-                        className='btn btn-primary' 
-                      >Submit</button>
-                    : ''
-                  }
-                </form>
-              )}
-            </ConnectBridgeWifi>
-          </Fragment>
-        }</BridgeNetwork>
-      </ModalContent>
+      <BridgeNetwork>
+        {({ data, loading: aboutLoading, error: aboutError, refetch, networkStatus }) => 
+          <ModalContent
+            onClose={closeModal}
+            className='overflow-hidden'
+            headerClassName='bg-info text-white'
+            title={
+              aboutLoading
+              ? '' 
+              : get(data, 'network.ssid') 
+              ? `Connected to ${get(data, 'network.ssid')}`
+              : 'Select a network'
+            }>
+              <Fragment>
+                <Alert type={'danger'}>{parseError(aboutError)}</Alert>
+                <ConnectBridgeWifi update={closeModal}>
+                  {(connect, { loading, error }) => (
+                    <form onSubmit={onSubmit(connect)}>
+                      <Alert type={'danger'}>{parseError(error)}</Alert>
+                      {
+                        aboutLoading
+                        ? <div className='text-center'><Loader /></div>
+                        : <div className='d-flex'>
+                            <Select
+                              className='flex-grow-1'
+                              label='Wifi Name'
+                              options={uniq(['Choose a network'].concat((get(data, 'scan') || []).map(({ ssid }) => ssid).filter(identity)))}
+                              value={selected}
+                              onChange={selectNetwork}
+                            />
+                            <button 
+                              type='button'
+                              className='btn' 
+                              onClick={() => refetch()}
+                            >Refresh</button>
+                          </div>
+                      }
+                      {
+                        selected 
+                        ? (
+                          <Text label='Wifi Password' name='password' type='password' />
+                        ) 
+                        : ''
+                      }
+                      {
+                        loading
+                        ? <Loader />
+                        : selected
+                        ? <button 
+                            type='submit'
+                            className='btn btn-primary' 
+                          >Submit</button>
+                        : ''
+                      }
+                    </form>
+                  )}
+                </ConnectBridgeWifi>
+              </Fragment>
+          </ModalContent>
+        }
+      </BridgeNetwork>
     </Modal>
   )
 }

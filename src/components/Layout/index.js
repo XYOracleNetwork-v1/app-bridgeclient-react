@@ -13,5 +13,5 @@ export const Main = ({ children }) => (
 )
 
 export const Page = ({ children }) => (
-  <div className='d-flex flex-column bg-primary vh-100'>{children}</div>
+  <div className='d-flex flex-column bg-primary flex-grow-1'>{children}</div>
 )
