@@ -1,7 +1,6 @@
 {
   "name": "app-bridgeclient-react",
   "version": "0.1.0",
-  "private": true,
   "homepage": "http://xyo-bridge.local",
   "proxy": "http://xyo-bridge.local",
   "dependencies": {
