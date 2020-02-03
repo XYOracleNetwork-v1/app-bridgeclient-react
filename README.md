@@ -2,18 +2,17 @@
 
 # XYO Bridge Manager (app-bridgeclient-react)
 
-## Branches
+## Table of Contents
 
-### Master
+-   [Title](#app-bridgeclient-react)
+-   [Description](#description)
+-   [Developer Mode](#developer-mode)
+-   [Deployment](#deployment)
+-   [Architecture](#architecture)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Credits](#credits)
 
-[![Build Status](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react.svg?branch=master)](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react)
-[![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=master&token=75e0ed2470ac349132bdaefb1fd64991cbd85d23)](https://bettercodehub.com/results/XYOracleNetwork/app-bridgeclient-react)
-[![Maintainability](https://api.codeclimate.com/v1/badges/f84e767728bcb7b5f0e7/maintainability)](https://codeclimate.com/github/XYOracleNetwork/app-bridgeclient-react/maintainability)
-
-### Develop
-
-[![Build Status](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react.svg?branch=develop)](https://travis-ci.com/XYOracleNetwork/app-bridgeclient-react)
-[![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=develop&token=75e0ed2470ac349132bdaefb1fd64991cbd85d23)](https://bettercodehub.com/results/XYOracleNetwork/app-bridgeclient-react)
 
 ## Description
 
@@ -67,11 +66,16 @@ yarn package
 $IP={YOUR_BRIDGE_IP} yarn deploy
 ```
 
+## Maintainers
+
+-   Arie Trouw
+
+## Contributing
+
 ## License
 
-Only for internal XY Company use at this time
+See the [LICENSE](LICENSE) file for license details.
 
 ## Credits
 
-Made with ❤️
-by [XYO](https://xyo.network)
+Made with 🔥and ❄️ by [XYO](https://www.xyo.network)
