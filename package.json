@@ -31,9 +31,7 @@
     "eject": "react-scripts eject",
     "package": "rm -f ./bridge-client.zip && yarn build && zip -r -X bridge-client.zip build",
     "deploy": "scp ./bridge-client.zip ubuntu@ec2-34-195-161-194.compute-1.amazonaws.com:~/XYOBridge/var/opt/",
-    "reprepo": "ssh ubuntu@ec2-34-195-161-194.compute-1.amazonaws.com \"rm -rf ~/XYOBridge/var/opt/bridge-client && unzip ~/XYOBridge/var/opt/bridge-client.zip -d ~/XYOBridge/var/opt/bridge-client\"",
-    "snyk-protect": "snyk protect --scripts-prepend-node-path",
-    "prepublish": "npm run snyk-protect"
+    "reprepo": "ssh ubuntu@ec2-34-195-161-194.compute-1.amazonaws.com \"rm -rf ~/XYOBridge/var/opt/bridge-client && unzip ~/XYOBridge/var/opt/bridge-client.zip -d ~/XYOBridge/var/opt/bridge-client\""
   },
   "eslintConfig": {
     "extends": "react-app"
