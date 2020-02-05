@@ -2,7 +2,7 @@
 
 # XYO Bridge Manager (app-bridgeclient-react)
 
-![](https://github.com/XYOracleNetwork/app-bridgeclient-react/workflows/Build/badge.svg) [![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=master)](https://bettercodehub.com/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9abe7a50ef444b069283f3c1b81af5db)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=XYOracleNetwork/app-bridgeclient-react&amp;utm_campaign=Badge_Grade) [![Known Vulnerabilities](https://snyk.io/test/github/XYOracleNetwork/app-bridgeclient-react/badge.svg)](https://snyk.io/test/github/XYOracleNetwork/app-bridgeclient-react)
+![](https://github.com/XYOracleNetwork/app-bridgeclient-react/workflows/Build/badge.svg) [![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=master)](https://bettercodehub.com/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9abe7a50ef444b069283f3c1b81af5db)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=XYOracleNetwork/app-bridgeclient-react&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/14e080978160e3244837/maintainability)](https://codeclimate.com/github/XYOracleNetwork/app-bridgeclient-react/maintainability) [![Known Vulnerabilities](https://snyk.io/test/github/XYOracleNetwork/app-bridgeclient-react/badge.svg)](https://snyk.io/test/github/XYOracleNetwork/app-bridgeclient-react)
 
 ## Table of Contents
 
