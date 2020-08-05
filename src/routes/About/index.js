@@ -74,7 +74,7 @@ const BridgeVersions = ({ data }) => {
 //   return <ForceUpdate className='btn btn-danger text-white mt-2' />
 // }
 
-export default ({}) => {
+export default () => {
   usePinProvider()
   return (
     <>

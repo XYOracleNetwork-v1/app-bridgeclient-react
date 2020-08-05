@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CheckForUpdates from '../../gql/mutations/checkForUpdates'
-import Loader from '@xyo-network/tool-storybook-react/dist/lib/Loader'
 
 export default ({ className, onSuccess }) => {
   return (

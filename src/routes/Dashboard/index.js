@@ -3,22 +3,19 @@ import AboutBridge from '../../gql/queries/about'
 import Loader from '@xyo-network/tool-storybook-react/dist/lib/Loader'
 import Alert from '@xyo-network/tool-storybook-react/dist/lib/Alert'
 import { CopyHash } from '@xyo-network/tool-storybook-react/dist/lib/BoundWitness/Info'
-import ConnectToWifi from '../../components/ConnectToWifi'
 import SetPaymentKey from '../../components/SetPaymentKey'
 import { usePinProvider } from '../../pin'
 import Archivists from './Archivists'
-import Navbar from '../../components/Navbar'
 import Owner from '../../components/Owner'
 import { Footer } from '../../components/Footer'
 import get from 'lodash/get'
 
 export default () => {
-  const [selected, selectNetwork] = useState(null)
-  const closeModal = () => selectNetwork(null)
+  // const [selected, selectNetwork] = useState(null)
+  // const closeModal = () => selectNetwork(null)
   usePinProvider()
   return (
   <>
-    {/* <ConnectToWifi selected={selected} onClose={closeModal} /> */}
     <AboutBridge>
       {({ data, loading, error }) => (
         <>

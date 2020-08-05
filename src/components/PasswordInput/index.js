@@ -5,7 +5,7 @@ import { setPin } from '../../pin'
 
 export default () => {
   const [error, setError] = useState('')
-  const ref = useRef()
+  // const ref = useRef()
   const onSubmit = async (ev) => {
     ev.preventDefault()
     const target = ev.target

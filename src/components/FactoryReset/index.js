@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import Modal, { ModalContent } from '@xyo-network/tool-storybook-react/dist/lib/Modal'
 import Loader from '@xyo-network/tool-storybook-react/dist/lib/Loader'
-import Alert from '@xyo-network/tool-storybook-react/dist/lib/Alert'
 import { unclaimBridge } from '../../gql/mutations/unclaimBridge'
 import FactoryReset from '../../gql/mutations/factoryReset'
-import { parseError } from '../../gql/error'
-import over from 'lodash/over'
 
 export default ({ className, onSuccess }) => {
   const [open, setOpen] = useState(false)
@@ -17,7 +14,7 @@ export default ({ className, onSuccess }) => {
   }
   return (
     <>
-      <a className={className} onClick={setModalOpen}>Factory Reset</a>
+      <button className={className} onClick={setModalOpen}>Factory Reset</button>
       <Modal open={open} onClose={setModalClosed}>
         <ModalContent 
           className='overflow-hidden'
