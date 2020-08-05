@@ -1,5 +1,6 @@
 import React from 'react'
 import { useBlockyImage } from '@xyo-network/tool-storybook-react/dist/lib/Blockie'
+import Card from '@xyo-network/tool-storybook-react/dist/lib/Card'
 import get from 'lodash/get'
 import './index.css'
 
