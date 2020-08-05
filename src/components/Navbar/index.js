@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment } from 'react'
 import { withRouter } from 'react-router-dom'
 import { parseError } from '../../gql/error'
 import BridgeNetworkStatus from '../../gql/queries/networkStatus'
