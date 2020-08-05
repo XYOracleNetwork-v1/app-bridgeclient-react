@@ -17,14 +17,13 @@ const networkStatusText = (data) => {
 }
 
 const Navbar = ({
-  goBack,
   history,
   hidden,
   transparent,
 }) => {
   // const onGoBack = () => history && history.goBack()
   const goHome = () => history && history.push('/')
-  const [menu, setMenu] = useState(false)
+  // const [menu, setMenu] = useState(false)
   // const setMenuClosed = () => setMenu(false)
   // const toggleMenu = () => setMenu(!menu)
 

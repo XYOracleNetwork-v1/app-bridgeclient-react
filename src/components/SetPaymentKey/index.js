@@ -9,8 +9,8 @@ import { parseError } from '../../gql/error'
 export default () => {
   const [open, setOpen] = useState('')
   const [paymentKey, setPaymentKey] = useState('')
-  const [address, setWeb3Address] = useState('')
-  const [web3Error, setWeb3Error] = useState('')
+  const [address] = useState('')
+  const [web3Error] = useState('')
   const closeModal = () => setOpen(false)
   const openModal = () => setOpen(true)
   // const onSubmit = updatePaymentKey => ev => {

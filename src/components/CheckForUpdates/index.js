@@ -6,8 +6,8 @@ export default ({ className, onSuccess }) => {
     <CheckForUpdates update={onSuccess} >
       {(checkForUpdates, { loading: updating }) => (
         updating
-        ? <a className={className} >Pending...</a>
-        : <a className={className} onClick={checkForUpdates} >Refresh</a>
+        ? <button className={className} >Pending...</button>
+        : <button className={className} onClick={checkForUpdates} >Refresh</button>
     )}
     </CheckForUpdates>
   )
