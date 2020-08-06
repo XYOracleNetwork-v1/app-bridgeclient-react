@@ -4,7 +4,7 @@ import { UPDATE_PIN } from '../gql/mutations/updatePin'
 import client from '../gql/client'
 import get from 'lodash/get'
 
-let [pinPromise, resolvePin, rejectPin] = (() => {
+let [pinPromise, resolvePin] = (() => {
   let res, rej
   return [new Promise((_res, _rej) => {
     res = _res

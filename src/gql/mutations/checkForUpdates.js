@@ -1,7 +1,6 @@
 import React from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
-import { BRIDGE_VERSIONS } from '../queries/versions'
 
 const CHECK_FOR_UPDATES = gql`
   mutation CheckForUpdates {

@@ -1,6 +1,5 @@
 import React from 'react'
 import gql from 'graphql-tag'
-import AddressFragment from '../fragments/address'
 import accountClient from '../accountClient'
 import { Query } from 'react-apollo'
 import get from 'lodash/get'

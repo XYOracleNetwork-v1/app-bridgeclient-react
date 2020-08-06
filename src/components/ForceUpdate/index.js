@@ -18,7 +18,7 @@ export default ({ className, onSuccess }) => {
   const toggleLogs = () => setLogs(!logs)
   return (
     <>
-      <a className={className} onClick={setModalOpen}>Force Update</a>
+      <button className={className} onClick={setModalOpen}>Force Update</button>
       <Modal open={open} onClose={setModalClosed}>
         <ModalContent 
           className='overflow-hidden'
