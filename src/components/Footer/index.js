@@ -21,6 +21,7 @@ export const Footer = ({ className }) => {
               className='p-2 border-bottom d-block text-capitalize'
               href={process.env.REACT_APP_TUTORIALS_URI || ''}
               target='_blank'
+              rel="noopener noreferrer"
             >
               tutorials
             </a>
@@ -28,6 +29,7 @@ export const Footer = ({ className }) => {
               className='p-2 border-bottom d-block text-capitalize'
               href={process.env.REACT_APP_GET_HELP_URI || ''}
               target='_blank'
+              rel="noopener noreferrer"
             >
               get help
             </a>
@@ -46,6 +48,7 @@ export const Footer = ({ className }) => {
               className='p-2 border-bottom d-block text-capitalize'
               href={process.env.REACT_APP_PRIVACY_URI || ''}
               target='_blank'
+              rel="noopener noreferrer"
             >
               privacy policy
             </a>
@@ -53,6 +56,7 @@ export const Footer = ({ className }) => {
               className='p-2 border-bottom d-block text-capitalize'
               href={process.env.REACT_APP_TERMS_URI || ''}
               target='_blank'
+              rel="noopener noreferrer"
             >
               terms of Service
             </a>

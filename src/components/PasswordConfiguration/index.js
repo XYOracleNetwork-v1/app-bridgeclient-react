@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { TextInput } from '@xyo-network/tool-storybook-react/dist/lib/Form'
 import { parseError } from '../../gql/error'
 import { configurePin } from '../../pin'

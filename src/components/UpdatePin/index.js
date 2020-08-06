@@ -23,7 +23,7 @@ export default ({ className }) => {
   }
   return (
     <>
-      <a className={className} onClick={setOpen}>Edit Password</a>
+      <button className={className} onClick={setOpen}>Edit Password</button>
       <Modal open={open} onClose={setClosed}>
         <ModalContent 
           className='overflow-hidden'

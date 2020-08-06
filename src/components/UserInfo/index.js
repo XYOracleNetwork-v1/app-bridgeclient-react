@@ -18,10 +18,10 @@ export default ({ onLogout }) => {
     <div
       className='position-relative bg-dark rounded m-auto mb-2 d-flex align-items-center justify-content-center overflow-hidden'
       style={{ height: 60, width: 60 }}
-    ><img src={blocky} className='w-100' /></div>
+    ><img src={blocky} className='w-100' alt=""/></div>
     <div className='col'>
       <p className='mb-0'>{get(user, 'displayName')}</p>
-      <a onClick={signOut} className='cursor-pointer'><u>Logout</u></a>
+      <button onClick={signOut} className='cursor-pointer'><u>Logout</u></button>
     </div>
   </div>
   : ''
