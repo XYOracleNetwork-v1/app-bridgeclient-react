@@ -1,8 +1,12 @@
-![Logo](logo.png)
+[logo]: https://cdn.xy.company/img/brand/XYO_full_colored.png
+
+[![logo]](https://xyo.network)
 
 # XYO Bridge Manager (app-bridgeclient-react)
 
 ![](https://github.com/XYOracleNetwork/app-bridgeclient-react/workflows/Build/badge.svg) [![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/app-bridgeclient-react?branch=master)](https://bettercodehub.com/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9abe7a50ef444b069283f3c1b81af5db)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=XYOracleNetwork/app-bridgeclient-react&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/14e080978160e3244837/maintainability)](https://codeclimate.com/github/XYOracleNetwork/app-bridgeclient-react/maintainability) [![Known Vulnerabilities](https://snyk.io/test/github/XYOracleNetwork/app-bridgeclient-react/badge.svg)](https://snyk.io/test/github/XYOracleNetwork/app-bridgeclient-react)
+
+> The XYO Foundation provides this source code available in our efforts to advance the understanding of the XYO Procotol and its possible uses. We continue to maintain this software in the interest of developer education. Usage of this source code is not intended for production.
 
 ## Table of Contents
 
