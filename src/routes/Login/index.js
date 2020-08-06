@@ -7,11 +7,9 @@ import {
 import Logo from '../../components/Logo'
 import Loader from '@xyo-network/tool-storybook-react/dist/lib/Loader'
 import IsConfigured from '../../gql/queries/isConfigured'
-import PinInput from '../../components/PinInput'
 import PasswordInput from '../../components/PasswordInput'
 import PasswordConfiguration from '../../components/PasswordConfiguration'
 import { parseError } from '../../gql/error'
-import Navbar from '../../components/Navbar'
 
 export default  () => {
   return (

@@ -1,46 +1,44 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import SetPaymentKey from '../../gql/mutations/setPaymentKey'
 import Modal, { ModalContent } from '@xyo-network/tool-storybook-react/dist/lib/Modal'
-import Text from '@xyo-network/tool-storybook-react/dist/lib/Form/Text'
-import Loader from '@xyo-network/tool-storybook-react/dist/lib/Loader'
 import Alert from '@xyo-network/tool-storybook-react/dist/lib/Alert'
-import Web3 from 'web3'
+// import Web3 from 'web3'
 import { parseError } from '../../gql/error'
-import first from 'lodash/first'
+// import first from 'lodash/first'
 
 export default () => {
   const [open, setOpen] = useState('')
   const [paymentKey, setPaymentKey] = useState('')
-  const [address, setWeb3Address] = useState('')
-  const [web3Error, setWeb3Error] = useState('')
+  const [address] = useState('')
+  const [web3Error] = useState('')
   const closeModal = () => setOpen(false)
   const openModal = () => setOpen(true)
-  const onSubmit = updatePaymentKey => ev => {
-    ev.preventDefault()
-    updatePaymentKey({ 
-      variables: { 
-        paymentKey
-      }
-    })
-  }
-  const loadAccount = async () => {
-    try {
-      if (window.ethereum) await window.ethereum.enable()
-      const provider = (
-        window.ethereum
-        ? window.ethereum
-        : window.web3 && window.web3.currentProvider
-        ? window.web3.currentProvider
-        : null
-      )
-      const web3 = new Web3(provider)
-      const accounts = await web3.eth.getAccounts()
-      const address = (first(accounts) || '').replace(/^0x/, '')
-      setWeb3Address(address)
-    } catch (e) {
-      setWeb3Error(e.message)
-    }
-  }
+  // const onSubmit = updatePaymentKey => ev => {
+  //   ev.preventDefault()
+  //   updatePaymentKey({ 
+  //     variables: { 
+  //       paymentKey
+  //     }
+  //   })
+  // }
+  // const loadAccount = async () => {
+  //   try {
+  //     if (window.ethereum) await window.ethereum.enable()
+  //     const provider = (
+  //       window.ethereum
+  //       ? window.ethereum
+  //       : window.web3 && window.web3.currentProvider
+  //       ? window.web3.currentProvider
+  //       : null
+  //     )
+  //     const web3 = new Web3(provider)
+  //     const accounts = await web3.eth.getAccounts()
+  //     const address = (first(accounts) || '').replace(/^0x/, '')
+  //     setWeb3Address(address)
+  //   } catch (e) {
+  //     setWeb3Error(e.message)
+  //   }
+  // }
 
   useEffect(() => {
     // if (!open) return
