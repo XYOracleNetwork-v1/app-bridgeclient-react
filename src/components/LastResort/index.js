@@ -12,7 +12,18 @@ export default ({ className, onSuccess }) => {
   const setModalClosed = () => setOpen(false)
   return (
     <>
-      <a className={className} onClick={setModalOpen}>Last Resort</a>
+      <button 
+        className={className} 
+        onClick={setModalOpen}
+        style={{ 
+          fontSize: "100%",
+          fontFamily: "inherit",
+          border: "0",
+          padding: "0"
+        }}
+        >
+          Last Resort
+        </button>
       <Modal open={open} onClose={setModalClosed}>
         <ModalContent 
           className='overflow-hidden'

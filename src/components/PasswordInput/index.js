@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { TextInput } from '@xyo-network/tool-storybook-react/dist/lib/Form'
 import { parseError } from '../../gql/error'
 import { setPin } from '../../pin'
 
 export default () => {
   const [error, setError] = useState('')
-  const ref = useRef()
+  // const ref = useRef()
   const onSubmit = async (ev) => {
     ev.preventDefault()
     const target = ev.target
