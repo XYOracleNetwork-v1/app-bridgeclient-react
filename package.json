@@ -20,7 +20,8 @@
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.3.1",
-    "web3": "^1.2.8"
+    "web3": "^1.2.8",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,7 +30,9 @@
     "eject": "react-scripts eject",
     "package": "rm -f ./bridge-client.zip && yarn build && zip -r -X bridge-client.zip build",
     "deploy": "scp ./bridge-client.zip ubuntu@ec2-34-195-161-194.compute-1.amazonaws.com:~/XYOBridge/var/opt/",
-    "reprepo": "ssh ubuntu@ec2-34-195-161-194.compute-1.amazonaws.com \"rm -rf ~/XYOBridge/var/opt/bridge-client && unzip ~/XYOBridge/var/opt/bridge-client.zip -d ~/XYOBridge/var/opt/bridge-client\""
+    "reprepo": "ssh ubuntu@ec2-34-195-161-194.compute-1.amazonaws.com \"rm -rf ~/XYOBridge/var/opt/bridge-client && unzip ~/XYOBridge/var/opt/bridge-client.zip -d ~/XYOBridge/var/opt/bridge-client\"",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,5 +45,6 @@
   ],
   "devDependencies": {
     "node-sass": "^4.13.1"
-  }
+  },
+  "snyk": true
 }

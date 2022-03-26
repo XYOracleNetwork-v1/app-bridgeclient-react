@@ -1,8 +1,11 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.3
+version: v1.22.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
     - '@xyo-network/tool-storybook-react > ipfs > ipld-zcash > zcash-bitcore-lib > lodash':
         patched: '2019-05-08T03:13:56.228Z'
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2022-03-26T16:43:11.242Z'
